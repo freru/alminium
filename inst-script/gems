@@ -38,6 +38,11 @@ cd redcarpet
 if [ "$OS" = "rhel6" ]
 then
     rake install 
+elif [ "$OS" = "debian" ]
+then
+    gem install rake --no-rdoc --no-ri
+    gem install rake-compiler --no-rdoc --no-ri
+    /usr/local/bin/rake install
 else
     gem install rake --no-rdoc --no-ri
     gem install rake-compiler --no-rdoc --no-ri
